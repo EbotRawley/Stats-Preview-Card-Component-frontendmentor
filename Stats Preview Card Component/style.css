@@ -15,28 +15,22 @@
     --ff-2: 'Lexend Deca', sans-serif;
 }
 
-* {
-    /* margin: 0; */
-
-}
-
 body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
     font-family: var(--ff-2);
     background: var(--primary-1);
 }
 
 .cont {
-    top: 50%;
-    left: 50%;
-    width: 75%;
-    height: 60%;
+    width: min(100%, 56rem);
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     overflow: hidden;
-    position: absolute;
     border-radius: 10px;
     background: var(--primary-2);
-    transform: translate(-50%, -50%);
+    grid-template-columns: 1fr 1fr;
 }
 
 .cont>div {
@@ -61,7 +55,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
     background-color: hsl(283, 96%, 28%);
 }
 
@@ -129,7 +124,6 @@ body {
         display: flex;
         flex-direction: column;
         text-align: center;
-        /* justify-content: center; */
     }
     .text p{
         height: 30%;
